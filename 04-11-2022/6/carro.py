@@ -3,4 +3,3 @@ class Carro():
         self.marca = marca
         self.modelo = modelo
         self.valor = valor
-        print(self)
