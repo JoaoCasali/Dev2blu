@@ -6,7 +6,6 @@ class PessoaFisica(Conta):
         self.titular = titular
         self.cpf = cpf
         self.saldo_inicial = saldo_inicial
-        print("Passando pelo construtor da Pessoa Fisica")
     
     def __str__(self):
         return f"{super().__str__()}\nTitular: {self.titular}\nCPF: {self.cpf}\nSaldo Inicial: {self.saldo_inicial}\nSegundo titular: {self.segundo_titular}"

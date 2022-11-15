@@ -3,7 +3,6 @@ class Conta():
         self.numero = numero
         self.agencia = agencia
         self.tipo = tipo
-        print("Passando pelo construtor da Conta")
     
     def __str__(self):
         return f'Numero da conta: {self.__numero}\nAgencia: {self.__agencia}\nTipo da conta: {self.__tipo}'
