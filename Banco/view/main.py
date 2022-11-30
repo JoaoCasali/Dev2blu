@@ -2,7 +2,7 @@ from os import system
 from time import sleep
 from model.pessoaFisica import PessoaFisica
 from model.pessoaJuridica import PessoaJuridica
-from controller.controller import create, read
+from controller.controller import create, read, update, delete
 
 PATH_PESSOA_FISICA = "Banco/PessoaFisica.txt"
 PATH_PESSOA_JURIDICA = "Banco/PessoaJuridica.txt"
@@ -20,11 +20,11 @@ def menu():
         
         match menu_inical:
             case 1:
-                menu = int(input("1.Criar PessoaFisica: \n2.Listar PessoasFisicas: \n0.sair: \nR:> "))
+                menu = int(input("1.Criar PessoaFisica: \n2.Listar PessoasFisicas: \n3.Atualizar:\n4.Deletar: \nR:> "))
                 match menu:
                     case 1:
                         pessoafisica = PessoaFisica(
-                            str(input("Digite o Nome do 1° titular:> ")),
+                            str(input("Digite o Nome do 1° titular:> ")).strip(),
                             str(input("Digite o Cpf:> ")),
                             float(input("Digite o Saldo Inicial:> "))
                         )
@@ -44,12 +44,23 @@ def menu():
                             sleep(1)
                             print("-----------")
 
+                    case 3:
+                        nome = input("Digite o nome do titular que será atualizado: ").strip()
+                        for pessoa in lista_fisica:
+                            if pessoa.titular == nome:
+                                update(lista_fisica, lista_fisica.index(pessoa), PessoaFisica, PATH_PESSOA_FISICA)
+
+                    case 4:
+                        nome = input("Digite o nome do titular que será deletado: ").strip()
+                        for pessoa in lista_fisica:
+                            if pessoa.titular == nome:
+                                delete(lista_fisica, lista_fisica.index(pessoa), PATH_PESSOA_FISICA)
             case 2:
-                menu = int(input("1.Criar PessoaJuridica: \n2.Listar PessoasJuridias: \n0.sair: \nR:> "))
+                menu = int(input("1.Criar PessoaJuridica: \n2.Listar PessoasJuridias: \n3.Atualizar:\n4.Deletar: \nR:> "))
                 match menu:
                     case 1:
                         pessoajuridica = PessoaJuridica(
-                            str(input("Digite o Nome do 1° titular:> ")),
+                            str(input("Digite o Nome do 1° titular:> ")).strip(),
                             str(input("Digite o CNPJ:> ")),
                             float(input("Digite o Saldo Inicial:> "))
                         )
@@ -69,5 +80,17 @@ def menu():
                             sleep(1)
                             print("-----------")
             
+                    case 3:
+                        nome = input("Digite o nome do titular que será atualizado: ").strip()
+                        for pessoa in lista_fisica:
+                            if pessoa.titular == nome:
+                                update(lista_fisica, lista_fisica.index(pessoa), PessoaJuridica, PATH_PESSOA_JURIDICA)
+
+                    case 4:
+                        nome = input("Digite o nome do titular que será deletado: ").strip()
+                        for pessoa in lista_fisica:
+                            if pessoa.titular == nome:
+                                delete(lista_fisica, lista_fisica.index(pessoa), PATH_PESSOA_JURIDICA)
+    
             case _:
                 break
