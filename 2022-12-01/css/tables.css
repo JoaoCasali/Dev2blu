@@ -1,0 +1,44 @@
+table {
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+}
+
+table thead {
+    background-color: blue;
+    text-align: right;
+}
+
+table thead tr th {
+    font-weight: bold;
+    height: 30px;
+}
+
+table tbody tr td {
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+table tbody tr td a {
+    color: white;
+    text-decoration: none;
+    padding: 2px 5px;
+    background-color: rgb(23, 180, 23);
+    border-radius: 5px;
+}
+
+table tr:nth-child(even) {
+    background-color: #b4a7a7;
+}
+
+table tr:nth-child(even) td {
+    color: black;
+}

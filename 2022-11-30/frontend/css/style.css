@@ -1,0 +1,51 @@
+body {
+    background-color: grey;
+    color: yellow;
+    justify-content: center;
+    width: 100%;
+    overflow: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+header img {
+    width: 5%;
+}
+header ul li {
+    display: inline;
+    margin-right: 10px;
+}
+header ul li a {
+    font-size: 25px;
+    color: yellow;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+header ul li a:visited {
+    color: yellow;
+}
+header ul li a:hover {
+    background-color: black;
+}
+main {
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+}
+
+table {
+    margin: auto;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    left: 0;
+}
