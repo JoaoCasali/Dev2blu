@@ -1,0 +1,29 @@
+.input-group {
+    width: 30%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: left;
+}
+
+.button-group {
+    display: inline;
+}
+
+.input-group input[type="text"] {
+    width: 100%;
+    border: 1px solid rgb(208, 208, 208);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.button-group input[type="submit"],
+.button-group input[type="reset"] {
+    width: 10%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
