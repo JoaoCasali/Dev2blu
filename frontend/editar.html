@@ -24,7 +24,7 @@
     </header>
     <main>
         <h1>Editar funcionário</h1>
-        <form action="">
+        <form id="form">
             <div class="input-group">
                 <label for="nome">Id</label>
                 <input type="text" id="id" placeholder="ID" disabled>
@@ -43,7 +43,8 @@
             </div>
             <div class="button-group">
                 <input type="submit" value="Salvar" style="background-color: #04B8A7" />
-                <input type="reset" value="Cancelar" style="background-color: rgb(172, 0, 0)" />
+                <input type="button" value="Cancelar" style="background-color: rgb(172, 0, 0)"
+                    onclick="window.location.href = 'listar.html';" />
             </div>
         </form>
     </main>
@@ -51,5 +52,7 @@
         <p>Isso é um footer</p>
     </footer>
 </body>
+
+<script src="js/editar.js"></script>
 
 </html>

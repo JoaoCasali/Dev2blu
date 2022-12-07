@@ -1,9 +1,9 @@
 function salvar(event) {
     event.preventDefault();
-    var listaAlunos = JSON.parse(localStorage.getItem('Funcionarios'));
+    var listaFuncionarios = JSON.parse(localStorage.getItem('Funcionarios'));
 
-    if (listaAlunos == null) {
-        listaAlunos = [];
+    if (listaFuncionarios == null) {
+        listaFuncionarios = [];
         id = 0;
     }
     else {
@@ -11,20 +11,20 @@ function salvar(event) {
         id = id + 1;
     }
 
-    var name = document.getElementById('nome').value;
-    var doc_people = document.getElementById('cargo').value;
-    var year = document.getElementById('salario').value;
+    var nome = document.getElementById('nome').value;
+    var cargo = document.getElementById('cargo').value;
+    var salario = document.getElementById('salario').value;
 
-    var Aluno = {
+    var funcionario = {
         'id': id,
-        'nome': name,
-        'cpf': doc_people,
-        'idade': year
-    }; listaAlunos.push(Aluno);
+        'nome': nome,
+        'cargo': cargo,
+        'salario': salario
+    }; listaFuncionarios.push(funcionario);
 
 
     localStorage.setItem('IdFuncionario', JSON.stringify(id));
-    localStorage.setItem('Funcionarios', JSON.stringify(listaAlunos));
+    localStorage.setItem('Funcionarios', JSON.stringify(listaFuncionarios));
     document.getElementById('form').reset();
 }
 

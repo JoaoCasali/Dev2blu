@@ -1,7 +1,7 @@
 function deletar(id) {
-    var lista = localStorage.getItem('Funcionarios');
+    var funcionarios = JSON.parse(localStorage.getItem('Funcionarios'));
     var novalista = [];
-    lista.forEach(e => {
+    funcionarios.forEach(e => {
         if (e['id'] != id) {
             novalista.push(e)
         }
@@ -28,8 +28,8 @@ function listar() {
         var tr = `<tr>
                     <td>${e['id']}</td>
                     <td>${e['nome']}</td>
-                    <td>${e['cpf']}</td>
-                    <td>${e['idade']}</td>
+                    <td>${e['cargo']}</td>
+                    <td>${e['salario']}</td>
                     <td>
                         <a href="editar.html?id=${e['id']}">editar</a>
                         <a onclick="deletar(${e['id']})">Deletar</a>

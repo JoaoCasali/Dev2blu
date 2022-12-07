@@ -19,7 +19,8 @@
 }
 
 .button-group input[type="submit"],
-.button-group input[type="reset"] {
+.button-group input[type="reset"],
+.button-group input[type="button"] {
     width: 10%;
     border: none;
     padding: 10px;
