@@ -1,0 +1,23 @@
+nav {
+    align-items: center;
+    background-color: #595959;
+    color: #04B8A7;
+}
+
+nav a:first-child {
+    width: 5%;
+}
+
+nav a:first-child img {
+    display: block;
+    width: 100%;
+    margin-right: 20px;
+}
+
+nav a:visited {
+    color: #04B8A7;
+}
+
+nav a.nav-link:hover {
+    color: #FFD966;
+}
