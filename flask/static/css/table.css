@@ -1,0 +1,26 @@
+.table .cabecalho {
+    width: 100%;
+    background-color: #595959;
+    color: white;
+    font-weight: bold;
+}
+
+.dados tr:nth-child(even) {
+    background-color: rgba(89, 89, 89, 0.2);
+}
+
+.dados tr {
+    color: #595959;
+}
+
+.dados tr td {
+    vertical-align: middle;
+}
+
+.dados tr td:last-child {
+    width: 15%;
+}
+
+.dados tr.semRegistro {
+    background-color: rgba(89, 89, 89, 0.2);
+}
